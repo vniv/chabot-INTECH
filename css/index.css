@@ -1,0 +1,183 @@
+/* material.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #121212; /* Fond sombre */
+    color: #e0e0e0; /* Texte clair */
+}
+
+header {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre moderne */
+    border-bottom: 2px solid #e0e0e0; /* Ajout d'une bordure pour démarquer */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+#contacts {
+    background-color: #0f3f3b; /* Fond sombre pour la liste des contacts */
+    width: 300px;
+    border-right: 1px solid #3a3a3a; /* Bordure légèrement contrastée */
+    box-shadow: 4px 0 6px rgba(255, 255, 255, 0.2); /* Ombre moderne */
+    padding: 10px;
+}
+
+#contacts h2 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    width: fit-content;
+    margin: auto;
+    border-block-end: solid; 
+    writing-mode: horizontal-tb;
+}
+
+#contacts ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bot {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+    padding: 3px;
+    border-radius: 10px;
+    
+}
+.bot-item {
+    display: flex;
+    padding: 10px 0;
+}
+
+.bot-avatar {
+    margin-right: 10px;
+}
+
+.bot-avatar img {
+    width: 40px; /* Taille du logo */
+    height: 40px;
+    border-radius: 50%; /* Logo rond */
+}
+
+.bot-info .bot-name {
+    font-size: 1rem;
+    color: #0f3f3b;
+}
+
+#chat {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #1f1f1f; /* Fond sombre pour la zone de chat */
+    color: #e0e0e0;
+}
+
+#message-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.message {
+    display: flex;
+    align-items: center; /* Alignement des avatars avec les messages */
+    margin-bottom: 10px;
+    animation: fadeIn 0.5s ease; /* Animation d'apparition */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.sent {
+    justify-content: flex-end;
+    flex-direction: row-reverse; /* Avatars à droite pour les messages envoyés */
+}
+
+.received {
+    justify-content: flex-start;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+}
+
+.avatar img {
+    width: 40px; /* Taille de l'avatar */
+    height: 40px;
+    border-radius: 50%; /* Rendre l'avatar rond */
+    margin: 0 10px;
+}
+
+.message-content {
+    background-color: #343a40; /* Bulle sombre */
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    color: #e0e0e0; /* Texte clair */
+}
+
+.sent .message-content {
+    background-color: #1d5c0d; /* Couleur bleue pour les messages envoyés */
+    color: #fff; /* Texte blanc pour les messages envoyés */
+    align-items: flex-end;
+    margin-left: auto; /* Alignement de la bulle à droite */
+}
+
+.received .message-content {
+    margin-right: auto; /* Alignement de la bulle à gauche */
+}
+
+#message-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #3a3a3a;
+    background-color: #2a2a2a;
+}
+
+#message {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #424242;
+    color: #e0e0e0; /* Texte clair */
+    margin-right: 10px;
+}
+
+#send-btn {
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Animation de changement de couleur */
+}
+
+#send-btn:hover {
+    background-color: #1565c0; /* Changement de couleur au survol */
+}
